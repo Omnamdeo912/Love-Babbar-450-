@@ -1,0 +1,27 @@
+class Solution{
+public:	
+	
+	
+	int isPalindrome(string S)
+	{
+	    // Your code goes here
+	    int n=S.size();
+	    string s2(S);
+	    char temp;
+	    for(int i=0,j=n-1;i<j;i++,j--)
+	    {
+	        temp =S[i];
+	        S[i]=S[j];
+	        S[j]=temp;
+	    }
+	    if(S.compare(s2)==0)
+	    return 1;
+	    else
+	    return 0;
+	}
+  
+  
+  /*
+  1) strcmp - this function works for char array not for strings.
+  2) if you want to compare two strings use - s.compare(s2) => will return 0 if both are equal.
+  3)string s(s1) : will create s string and initilize it with s1.
