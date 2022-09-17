@@ -1,0 +1,28 @@
+//Driver code
+
+class Solution
+{
+    public:
+    void sort012(int a[], int n)
+    {
+        // code here 
+        map<int,int> f;
+        for(int i=0;i<n;i++)
+        {
+            f[a[i]]++;           //this how we simply sotre values in the map.
+        }
+        
+        map <int,int> :: iterator it;
+        int i;
+        for(i=0;i<f[0];i++)
+        a[i]=0;
+        for(;i<f[1]+f[0];i++)
+        a[i]=1;
+        for(;i<f[2]+f[1]+f[0];i++)
+        a[i]=2;
+       
+       }
+    
+};
+
+//{ Driver Code Starts.
