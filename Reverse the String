@@ -1,0 +1,14 @@
+string reverseWord(string str){
+    
+  //Your code here
+  int c=str.size();
+  char temp;                    // char coz string ka ek ek letter char hi hota hai individually.
+  
+  for(int i=0;i<=(c-1)/2;i++)   // this how we loop on the string and swap elements
+  {
+     temp=str[i];
+     str[i]=str[c-1-i];
+     str[c-1-i]=temp;
+  }
+  return str;
+}
